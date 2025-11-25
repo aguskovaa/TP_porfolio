@@ -9,21 +9,48 @@
 <body>
     <div class="contenedor">
         <div class="perfil">
-            <h1>Agustin Kovalsky</h1>
-            <p>Portfolio personal</p>
+            <div class="info-perfil">
+                <h1>Agustin Kovalsky</h1>
+                <p>Portfolio personal</p>
+            </div>
+            <div class="contenedor-foto">
+                <img src="foto.png" class="foto-perfil" alt="Foto de perfil">
+            </div>
         </div>
         
         <div class="categorias">
-            <div class="cajita habilidades">skills</div>
-            <div class="cajita sobre-mi">sobre mi</div>
-            <div class="cajita educacion">educacion</div>
-            <div class="cajita proyecto1">proyecto 1</div>
-            <div class="cajita proyecto2">proyecto 2</div>
-            <div class="cajita proyectoB">proyecto B</div>
-            <div class="cajita que-aporto">que aporto?</div>
-            <div class="cajita que-busco">que busco?</div>
-            <div class="cajita que-aspiro">a que aspiro?</div>
+            <div class="cajita habilidades" onclick="abrirZoom(this)">
+                <img src="skills.jpg" class="imagen-cuadro" alt="Skills">
+                <div class="titulo-caja">skills</div>
+            </div>
+            <div class="cajita sobre-mi" onclick="abrirZoom(this)">
+                <img src="sobre-mi.jpg" class="imagen-cuadro" alt="Sobre mí">
+                <div class="titulo-caja">sobre mi</div>
+            </div>
+            <div class="cajita educacion" onclick="abrirZoom(this)">
+                <img src="educacion.jpg" class="imagen-cuadro" alt="Educación">
+                <div class="titulo-caja">educacion</div>
+            </div>
+            <div class="cajita proyecto1" onclick="abrirZoom(this)">
+                <img src="proyecto1.jpg" class="imagen-cuadro" alt="Proyecto 1">
+                <div class="titulo-caja">proyecto 1</div>
+            </div>
+            <div class="cajita proyecto2" onclick="abrirZoom(this)">
+                <img src="proyecto2.jpg" class="imagen-cuadro" alt="Proyecto 2">
+                <div class="titulo-caja">proyecto 2</div>
+            </div>
+            <div class="cajita proyecto3" onclick="abrirZoom(this)">
+                <img src="proyecto3.jpg" class="imagen-cuadro" alt="Proyecto 3">
+                <div class="titulo-caja">proyecto 3</div>
+            </div>
         </div>
     </div>
+
+    <div id="zoom" class="zoom">
+        <div class="zoom-cerrar" onclick="cerrarZoom()">X</div>
+        <div id="zoom-contenido" class="zoom-contenido"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
